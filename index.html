@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>My Site</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body class="body">
+    <div class="jumbotron" id="jumbo">
+        <div class="col-xs-12 col-md-3-offset-9 no-gutter">
+            <h1 class="title">
+                Jin's Travel Journal
+            </h1>
+        </div>
+        <!--<div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-3 col-xs-offset-9 no-gutter">
+                    <iframe class="strava1" allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/3121779/activity-summary/88846b5a48e2ecaa4b8a0e7879223236fd74c317'></iframe>
+                </div>
+            </div>
+        </div>-->
+    </div>
+    <!--Navbar-->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- hamburger button. do not touch! -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <!-- HOME BUTTON: REPLACE href="#" with your landing page url -->
+                <a class="navbar-brand" href="#">
+                    <!-- PUT BRAND LOGO / ICON HERE (instead of font-awesome -->
+                    <i class="fa fa-telegram"></i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- THIS UL HANDLES OUR LINKS -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://facebook.com">Diving</a></li>
+                    <li><a href="http://facebook.com">Cycling Travel</a></li>
+                    <!-- to make more links, make some <li> in here -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Navbar end-->
+    <!--Container-->
+    <div class="container">
+        <!--Row 1 Intro-->
+        <div class="row row1">
+            <div class="col-xs-12">
+                Short intro -   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed obcaecati praesentium, dolorum cum officia reprehenderit repellat
+                rem minus sequi alias temporibus ipsa pariatur quidem rerum laboriosam similique assumenda magnam quos.
+            </div>
+        </div>
+        <!--End of row 1-->
+
+        <!--Row 2 Places-->
+        <div class="row row2">
+            <!--Row 2 Col 1-->
+            <div class="col-xs-12 col col-md-6">
+                <h3><span class="text-red">Dive</span>nture</h3>
+                <a href=""> <img src="image1/diving.jpg" class="img-responsive" alt="diving">
+               </a> Join me in my adventure into the realm of poisedon, learn about the unique eco systems around the world and tips and tricks on Underwater Photography.
+            </div>
+            <!--End of Row 2 Col 1-->
+            <!--Row 2 Col 2-->
+            <div class="col-xs-12 col col-md-6">
+                <h3>2 Wheels Travel</h3>
+                <a href=""><img src="image1/cycling_taiwan.jpg" class="img-responsive" alt="cycling taiwan"></a>
+                Join me on my cycling trips overseas to lesser known places away from tourist, learn about their culture and unique way of life.
+            </div>
+            <!--End of Row 2 Col 2-->
+
+        </div>
+        <!--End of Row 2-->
+        <hr>
+        <!--Row 3 Map-->
+        <div class="row row3">
+
+            <div class="col-xs-12">
+                <h2>Visited Countries</h2>
+                <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+                <script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
+                <script src="https://www.amcharts.com/lib/3/themes/dark.js" type="text/javascript"></script>
+                <div id="mapdiv" style="width: 1000px; height: 450px;"></div>
+                <div style="width: 1000px; font-size: 70%; padding: 5px 0; text-align: center; background-color: #535364; margin-top: 1px; color: #B4B4B7;"><a href="https://www.amcharts.com/visited_countries/" style="color: #B4B4B7;">Create your own visited countries map</a>                    or check out the <a href="https://www.amcharts.com/" style="color: #B4B4B7;">JavaScript Charts</a>.</div>
+                <script type="text/javascript">
+                    var map = AmCharts.makeChart("mapdiv", {
+                        type: "map",
+                        theme: "dark",
+                        projection: "mercator",
+                        panEventsEnabled: true,
+                        backgroundColor: "#535364",
+                        backgroundAlpha: 1,
+                        zoomControl: {
+                            zoomControlEnabled: true
+                        },
+                        dataProvider: {
+                            map: "worldHigh",
+                            getAreasFromMap: true,
+                            areas:
+                            [
+                                {
+                                    "id": "CN",
+                                    "showAsSelected": true
+                                },
+                                {
+                                    "id": "HK",
+                                    "showAsSelected": true
+                                },
+                                {
+                                    "id": "MY",
+                                    "showAsSelected": true
+                                },
+                                {
+                                    "id": "MV",
+                                    "showAsSelected": true
+                                },
+                                {
+                                    "id": "PH",
+                                    "showAsSelected": true
+                                },
+                                {
+                                    "id": "SG",
+                                    "showAsSelected": true
+                                },
+                                {
+                                    "id": "TW",
+                                    "showAsSelected": true
+                                },
+                                {
+                                    "id": "TH",
+                                    "showAsSelected": true
+                                },
+                                {
+                                    "id": "VN",
+                                    "showAsSelected": true
+                                },
+                                {
+                                    "id": "AU",
+                                    "showAsSelected": true
+                                },
+                                {
+                                    "id": "ID",
+                                    "showAsSelected": true
+                                },
+                            ]
+                        },
+                        areasSettings: {
+                            autoZoom: true,
+                            color: "#B4B4B7",
+                            colorSolid: "#84ADE9",
+                            selectedColor: "#84ADE9",
+                            outlineColor: "#666666",
+                            rollOverColor: "#9EC2F7",
+                            rollOverOutlineColor: "#000000"
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+        <!--End of row 3-->
+        <hr>
+        <!--Row 4-->
+        <div class="row row4">
+            <!--Row 4 Col 1 Strava log-->
+            <div class="col-xs-12 col-md-4">
+                <h3>Follow me on Strava</h3>
+                <iframe class="strava1" allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/3121779/activity-summary/88846b5a48e2ecaa4b8a0e7879223236fd74c317'></iframe>
+            </div>
+            <!--End of row 4 col 1-->
+            <!--Row 4 Col 2 Pictures-->
+            <div class="col-xs-12 col-md-4">
+                <form method="post" action="https://script.google.com/macros/s/AKfycbxcMlvs56XGsEMfG92H5u0hJqw4Yt3LIvjLXHBeQKwfGCnUcmJS/exec">
+                    <fieldset>
+                        <legend>Contact Me</legend>
+                        <div class="form-group">
+                            <label for="name-id">
+                                name
+                            </label>
+                            <input type="text" name="NAME" id="name-id" class="form-control my-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-id">
+                                email
+                            </label>
+                            <input type="email" name="EMAIL" id="email-id" class="form-control my-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default my-btn form-control" id="submit-id">submit</button>
+
+                            <div class="alert alert-danger alert-dismissible fade in" hidden id="alert-id">
+                                <button type="button" class="close" id="close-id">
+                                    <span>&times;</span>
+                                </button> Thank you! I will get in touch.
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <!--Row 5 Map-->
+
+        </div>
+        <!--End of row 5-->
+
+
+    </div>
+    <!--End of container-->
+
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="project.js"></script>
+</body>
+
+</html>

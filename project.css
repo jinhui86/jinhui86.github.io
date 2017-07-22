@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,400,900');
+/*link to the html by class*/
+.body{
+    background-color: #e2ffff;
+}
+.jumbotron {
+    margin: 0;
+    padding-bottom: 0;
+    background-image: url("image1/jumbotronbg2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    width:100%;
+    position:relative;
+    height: 300px;
+}
+.title{
+    display: inline-block;
+    position: absolute;
+    top: 70px;
+    right: 5px;
+}
+.navbar{
+    background-color:#73b7ef;
+}
+.no-gutter{
+    padding:0;
+    margin-right:0;
+}
+.strava1 {
+    margin-right: 0;
+    margin-bottom: 0;
+    width:100%; 
+    min-height: 160px;
+}
+.text-red{
+    color:red;
+}
+.row1{
+    background-color: white;
+}
+.row2{
+    background-color: #f2f4f4;
+}
+.row3{
+    background-color: white;
+}
+.row4{
+    background-color: #2c2d2d;
+    -webkit-text-fill-color: whitesmoke;
+}
